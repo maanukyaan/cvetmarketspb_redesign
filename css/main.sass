@@ -1,11 +1,11 @@
-html, body
+body, html
+    min-height: 100%
+    height: 100%
     min-width: 100%
     width: 100%
-    min-height: 100%
-    height: 100% !important
 
 header
-    height: 100%
+    height: 100vh
     width: 100%
     background-image: url("../img/header_background.png")
     background-position: center
@@ -16,6 +16,9 @@ header
 
     @media screen and ( max-height: 950px )
         background-position: top
+
+    @media screen and ( max-width: 500px )
+        background-image: url("../img/header_background_mobile.png")
 
     nav
         width: 83%
@@ -62,6 +65,9 @@ header
 
 section.assortment
     padding: 115px
+
+    @media screen and ( max-width: 700px )
+        padding: 70px 20px
 
     h2
         font-family: 'Roboto'
@@ -155,7 +161,6 @@ section.assortment
 
 section.prices
     width: 100%
-    height: 830px
     background-image: url("../img/toulip_boucket_rose.jpeg")
     background-position: center
     background-size: cover
@@ -206,7 +211,7 @@ section.prices
                 padding: 0 !important
 
     .header__cta-button
-        width: 343px
+        max-width: 343px
         height: 75px
         background: linear-gradient(180deg, #71B943 0%, #5CA32F 100%)
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.13)
@@ -220,6 +225,36 @@ section.prices
         line-height: 28px
         color: #fff
         margin: 52px 0 0 0
+        white-space: nowrap
+        display: flex
+        justify-content: center
+        align-items: center
+
+    @media screen and ( max-width: 700px )
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 20px
+        height: 766px
+        background-image: url("../img/toulip_boucket_rose_mobile.png")
+        h2
+            font-size: 29px
+            text-align: center
+            max-width: 100%
+            white-space: nowrap
+
+        ul
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: 34px 0 0 0
+
+            li
+                font-size: 24px
+                white-space: nowrap
+
+        .header__cta-button
+            margin: 32px 0 0 0
 
 section.benefits
     padding: 115px 147px
@@ -244,6 +279,15 @@ section.benefits
         display: flex
         align-items: center
         justify-content: space-between
+        margin: 0 auto
+        max-width: 1147px
+
+        @media screen and ( max-width: 1288px )
+            flex-direction: column
+
+            .benefit
+                margin: 15px 0 !important
+                justify-content: center
 
         .benefit
             border: 2px solid #5CA32F
@@ -253,12 +297,10 @@ section.benefits
             display: flex
             flex-direction: column
             align-items: center
-
             box-sizing: border-box
-
             width: 329px
             height: 230px
-
+            margin: 0 20px
             img
                 width: 69px
                 height: 68px
@@ -273,12 +315,14 @@ section.benefits
                 text-align: center
                 color: #090909
 
+    @media screen and ( max-width: 700px )
+        padding: 20px
+
 .leave-request
     padding: 125px
     padding-top: 0
     display: flex
     justify-content: center
-
     &__container
         max-width: 1185px
         border: 2px solid #5CA32F
@@ -288,16 +332,16 @@ section.benefits
 
     &__left
         position: relative
+        order: 1
 
         img
             position: relative
             right: 42px
             top: 42px
-            @media screen and ( max-width: 1200px )
-
     &__right
         display: flex
         flex-direction: column
+        order: 2
         h2
             font-family: 'Roboto'
             font-style: normal
@@ -348,6 +392,58 @@ section.benefits
             white-space: nowrap
             margin: 40px 0 0 0
 
+    @media screen and ( max-width: 1220px )
+        &__container
+            flex-direction: column
+            padding: 36px
+
+        &__left
+            order: 2 !important
+
+            img
+                height: 700px
+                right: 19% !important
+                top: 9% !important
+
+        &__right
+            order: 1 !important
+
+    @media screen and ( max-width: 700px )
+        padding: 20px
+        overflow: hidden
+        max-width: 100%
+
+        h2
+            width: inherit
+            font-size: 26px
+            text-align: center
+
+        h3
+            font-size: 20px
+            text-align: center
+
+        .leave-request__telephone-a
+            text-align: center
+            font-size: 26px !important
+
+        &__left
+            img
+                height: 400px
+                left: -23.5vw !important
+                top: 14% !important
+
+        &__right
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        .leave-request__cta-button
+            width: 292px
+            height: 68px
+            display: flex
+            justify-content: center
+            align-items: center
+
 section.video
     display: flex
     justify-content: center
@@ -355,12 +451,17 @@ section.video
     background: url("../img/sorting_tulips.png")
     background-size: cover
     background-position: center center
-    height: 90vh
     padding: 147px 247px
 
+    @media screen and ( max-width: 1000px )
+        padding: 147px
+
+    @media screen and ( max-width: 700px )
+        padding: 77px 19px
+
     .video__container
-        width: 100%
-        height: 100%
+        width: 90vw
+        height: 90vh
         background: linear-gradient(180deg, rgba(113, 185, 67, .2) 0%, rgba(92, 163, 47, .2) 100%)
         border: 7px solid #5CA32F
         border-radius: 22px
@@ -425,10 +526,44 @@ section.our-tulips
             position: absolute
             top: -70px
 
+    @media screen and ( max-width: 1300px )
+        .our-tulips__container
+
+            & > div > div:first-child
+                margin: 0 0 35px 0 !important
+
+    @media screen and ( max-width: 1219px )
+        padding: 60px 0 0 0
+        background: linear-gradient(180deg, rgba(113, 185, 67, .2) 0%, rgba(92, 163, 47, .2) 100%)
+
+        h2
+            margin: 0 0 80px 0
+
+        .our-tulips__container
+            padding: 0 !important
+            margin: 0 !important
+            background: transparent
+            height: inherit
+
+            h3
+                font-size: 24px
+
+            p
+                font-size: 20px
+                width: 90%
+
+            img
+                position: static !important
+                width: 70%
+
+    @media screen and ( max-width: 700px )
+        img
+            width: 50% !important
+
 section.pre-order
     width: 100%
-    height: 800px
-    padding: 81px 160px
+    min-height: 800px
+    padding: 81px
     background-image: url("../img/pink_tulips_background.png")
     background-size: cover
     background-position: bottom
@@ -451,6 +586,12 @@ section.pre-order
         justify-content: center
         align-items: center
         margin: 90px 0
+
+        @media screen and ( max-width: 1100px )
+            flex-direction: column
+            align-items: flex-start
+            li
+                margin: 17px 0 !important
 
         li
             display: flex
@@ -503,6 +644,28 @@ section.pre-order
         color: #fff
         white-space: nowrap
 
+    @media screen and ( max-width: 700px )
+        padding: 70px 20px
+
+        h2
+            font-size: 30px
+
+        ul
+            padding: 0 !important
+            margin: 0 !important
+            align-items: flex-start
+            justify-content: center
+
+            li
+                margin: 17px 0
+
+            h3
+                width: 70%
+
+    @media screen and ( max-width: 500px )
+        background-image: url("../img/pink_tulips_background_mobile.png")
+        background-position: center
+
 footer
     background-color: #292E26
     color: #fff
@@ -551,7 +714,7 @@ footer
 
                 color: #FFFFFF
     span
-        width: 900px
+        padding: 0 50px
         font-family: 'Roboto'
         font-style: normal
         font-weight: 300
@@ -563,3 +726,28 @@ footer
         color: #FFFFFF
 
         opacity: 0.5
+
+    @media screen and ( max-width: 940px )
+        padding: 30px 0 60px 0
+        .footer__container
+            flex-direction: column
+
+        .footer__left
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                margin: 0 0 35px 0 !important
+
+            & > div
+                align-items: center !important
+                a
+                    margin: 0 !important
+                & > div
+                    margin: 35px 0 !important
+
+        .footer__right
+            text-align: center !important
+            line-height: 20px
+            p
+                text-align: center !important

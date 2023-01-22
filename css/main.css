@@ -1,12 +1,12 @@
-html, body {
+body, html {
+  min-height: 100%;
+  height: 100%;
   min-width: 100%;
   width: 100%;
-  min-height: 100%;
-  height: 100% !important;
 }
 
 header {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-image: url("../img/header_background.png");
   background-position: center;
@@ -18,6 +18,11 @@ header {
 @media screen and (max-height: 950px) {
   header {
     background-position: top;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    background-image: url("../img/header_background_mobile.png");
   }
 }
 header nav {
@@ -66,6 +71,11 @@ header ul li .header__icon {
 
 section.assortment {
   padding: 115px;
+}
+@media screen and (max-width: 700px) {
+  section.assortment {
+    padding: 70px 20px;
+  }
 }
 section.assortment h2 {
   font-family: "Roboto";
@@ -162,7 +172,6 @@ section.assortment .assortment__container .assortment__cta-button {
 
 section.prices {
   width: 100%;
-  height: 830px;
   background-image: url("../img/toulip_boucket_rose.jpeg");
   background-position: center;
   background-size: cover;
@@ -214,7 +223,7 @@ section.prices ul li p {
   padding: 0 !important;
 }
 section.prices .header__cta-button {
-  width: 343px;
+  max-width: 343px;
   height: 75px;
   background: linear-gradient(180deg, #71B943 0%, #5CA32F 100%);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.13);
@@ -228,6 +237,39 @@ section.prices .header__cta-button {
   line-height: 28px;
   color: #fff;
   margin: 52px 0 0 0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  section.prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 766px;
+    background-image: url("../img/toulip_boucket_rose_mobile.png");
+  }
+  section.prices h2 {
+    font-size: 29px;
+    text-align: center;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+  section.prices ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 34px 0 0 0;
+  }
+  section.prices ul li {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+  section.prices .header__cta-button {
+    margin: 32px 0 0 0;
+  }
 }
 
 section.benefits {
@@ -253,6 +295,17 @@ section.benefits .benefits__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1147px;
+}
+@media screen and (max-width: 1288px) {
+  section.benefits .benefits__container {
+    flex-direction: column;
+  }
+  section.benefits .benefits__container .benefit {
+    margin: 15px 0 !important;
+    justify-content: center;
+  }
 }
 section.benefits .benefits__container .benefit {
   border: 2px solid #5CA32F;
@@ -265,6 +318,7 @@ section.benefits .benefits__container .benefit {
   box-sizing: border-box;
   width: 329px;
   height: 230px;
+  margin: 0 20px;
 }
 section.benefits .benefits__container .benefit img {
   width: 69px;
@@ -279,6 +333,11 @@ section.benefits .benefits__container .benefit span {
   line-height: 107.7%;
   text-align: center;
   color: #090909;
+}
+@media screen and (max-width: 700px) {
+  section.benefits {
+    padding: 20px;
+  }
 }
 
 .leave-request {
@@ -296,6 +355,7 @@ section.benefits .benefits__container .benefit span {
 }
 .leave-request__left {
   position: relative;
+  order: 1;
 }
 .leave-request__left img {
   position: relative;
@@ -305,6 +365,7 @@ section.benefits .benefits__container .benefit span {
 .leave-request__right {
   display: flex;
   flex-direction: column;
+  order: 2;
 }
 .leave-request__right h2 {
   font-family: "Roboto";
@@ -356,6 +417,60 @@ section.benefits .benefits__container .benefit span {
   white-space: nowrap;
   margin: 40px 0 0 0;
 }
+@media screen and (max-width: 1220px) {
+  .leave-request__container {
+    flex-direction: column;
+    padding: 36px;
+  }
+  .leave-request__left {
+    order: 2 !important;
+  }
+  .leave-request__left img {
+    height: 700px;
+    right: 19% !important;
+    top: 9% !important;
+  }
+  .leave-request__right {
+    order: 1 !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .leave-request {
+    padding: 20px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .leave-request h2 {
+    width: inherit;
+    font-size: 26px;
+    text-align: center;
+  }
+  .leave-request h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .leave-request .leave-request__telephone-a {
+    text-align: center;
+    font-size: 26px !important;
+  }
+  .leave-request__left img {
+    height: 400px;
+    left: -23.5vw !important;
+    top: 14% !important;
+  }
+  .leave-request__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .leave-request .leave-request__cta-button {
+    width: 292px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 section.video {
   display: flex;
@@ -364,12 +479,21 @@ section.video {
   background: url("../img/sorting_tulips.png");
   background-size: cover;
   background-position: center center;
-  height: 90vh;
   padding: 147px 247px;
 }
+@media screen and (max-width: 1000px) {
+  section.video {
+    padding: 147px;
+  }
+}
+@media screen and (max-width: 700px) {
+  section.video {
+    padding: 77px 19px;
+  }
+}
 section.video .video__container {
-  width: 100%;
-  height: 100%;
+  width: 90vw;
+  height: 90vh;
   background: linear-gradient(180deg, rgba(113, 185, 67, 0.2) 0%, rgba(92, 163, 47, 0.2) 100%);
   border: 7px solid #5CA32F;
   border-radius: 22px;
@@ -433,11 +557,47 @@ section.our-tulips .our-tulips__container img {
   position: absolute;
   top: -70px;
 }
+@media screen and (max-width: 1300px) {
+  section.our-tulips .our-tulips__container > div > div:first-child {
+    margin: 0 0 35px 0 !important;
+  }
+}
+@media screen and (max-width: 1219px) {
+  section.our-tulips {
+    padding: 60px 0 0 0;
+    background: linear-gradient(180deg, rgba(113, 185, 67, 0.2) 0%, rgba(92, 163, 47, 0.2) 100%);
+  }
+  section.our-tulips h2 {
+    margin: 0 0 80px 0;
+  }
+  section.our-tulips .our-tulips__container {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+    height: inherit;
+  }
+  section.our-tulips .our-tulips__container h3 {
+    font-size: 24px;
+  }
+  section.our-tulips .our-tulips__container p {
+    font-size: 20px;
+    width: 90%;
+  }
+  section.our-tulips .our-tulips__container img {
+    position: static !important;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  section.our-tulips img {
+    width: 50% !important;
+  }
+}
 
 section.pre-order {
   width: 100%;
-  height: 800px;
-  padding: 81px 160px;
+  min-height: 800px;
+  padding: 81px;
   background-image: url("../img/pink_tulips_background.png");
   background-size: cover;
   background-position: bottom;
@@ -460,6 +620,15 @@ section.pre-order ul {
   justify-content: center;
   align-items: center;
   margin: 90px 0;
+}
+@media screen and (max-width: 1100px) {
+  section.pre-order ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section.pre-order ul li {
+    margin: 17px 0 !important;
+  }
 }
 section.pre-order ul li {
   display: flex;
@@ -512,6 +681,32 @@ section.pre-order .pre-order__cta-button {
   color: #fff;
   white-space: nowrap;
 }
+@media screen and (max-width: 700px) {
+  section.pre-order {
+    padding: 70px 20px;
+  }
+  section.pre-order h2 {
+    font-size: 30px;
+  }
+  section.pre-order ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  section.pre-order ul li {
+    margin: 17px 0;
+  }
+  section.pre-order ul h3 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.pre-order {
+    background-image: url("../img/pink_tulips_background_mobile.png");
+    background-position: center;
+  }
+}
 
 footer {
   background-color: #292E26;
@@ -560,7 +755,7 @@ footer .footer__container .footer__right p {
   color: #FFFFFF;
 }
 footer span {
-  width: 900px;
+  padding: 0 50px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
@@ -571,4 +766,36 @@ footer span {
   margin: 34px 0 0 0;
   color: #FFFFFF;
   opacity: 0.5;
+}
+@media screen and (max-width: 940px) {
+  footer {
+    padding: 30px 0 60px 0;
+  }
+  footer .footer__container {
+    flex-direction: column;
+  }
+  footer .footer__left {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer__left img {
+    margin: 0 0 35px 0 !important;
+  }
+  footer .footer__left > div {
+    align-items: center !important;
+  }
+  footer .footer__left > div a {
+    margin: 0 !important;
+  }
+  footer .footer__left > div > div {
+    margin: 35px 0 !important;
+  }
+  footer .footer__right {
+    text-align: center !important;
+    line-height: 20px;
+  }
+  footer .footer__right p {
+    text-align: center !important;
+  }
 }/*# sourceMappingURL=main.css.map */
