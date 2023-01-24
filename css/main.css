@@ -9,15 +9,15 @@ header {
   height: 100vh;
   width: 100%;
   background-image: url("../img/header_background.png");
-  background-position: center;
+  background-position: center 20%;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
 }
-@media screen and (max-height: 950px) {
+@media screen and (max-width: 1100px) {
   header {
-    background-position: top;
+    background-image: url("../img/834.png");
   }
 }
 @media screen and (max-width: 500px) {
@@ -59,6 +59,7 @@ header ul li .header__telephone-a {
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+  white-space: nowrap;
   background: linear-gradient(180deg, #71B943 0%, #5CA32F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,6 +69,31 @@ header ul li .header__telephone-a {
 header ul li .header__icon {
   margin: 0 3px;
 }
+header .header__cta-button {
+  max-width: 251px;
+  max-height: 68px;
+  background: linear-gradient(180deg, #71B943 0%, #5CA32F 100%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 44px;
+  padding: 24px 82px;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+}
 
 section.assortment {
   padding: 115px;
@@ -75,6 +101,9 @@ section.assortment {
 @media screen and (max-width: 700px) {
   section.assortment {
     padding: 70px 20px;
+  }
+  section.assortment h2 {
+    font-size: 35px !important;
   }
 }
 section.assortment h2 {
@@ -102,7 +131,7 @@ section.assortment .assortment__container .assortment__item {
 }
 section.assortment .assortment__container .assortment__item-image-container {
   width: 100%;
-  height: 373px;
+  height: 400px;
 }
 section.assortment .assortment__container .assortment__item-image-container img {
   width: 100%;
@@ -453,10 +482,13 @@ section.benefits .benefits__container .benefit span {
     text-align: center;
     font-size: 26px !important;
   }
+  .leave-request__left {
+    align-self: flex-start;
+    padding: 0 0 0 10px;
+  }
   .leave-request__left img {
     height: 400px;
-    left: -23.5vw !important;
-    top: 14% !important;
+    top: 13% !important;
   }
   .leave-request__right {
     display: flex;
